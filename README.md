@@ -79,3 +79,24 @@ Our evaluation pipeline includes:
 
 
 * **Metrics:** Evaluating performance using Accuracy, Precision, Recall, F1-score, confusion matrices, and runtime. We also analyze the average and distribution of the dynamically selected $K$ values across the feature space. Error analysis will examine cases where adaptive selection changes the prediction relative to the best fixed-K baseline.
+
+## Running the Experiments
+
+To run the complete suite of synthetic benchmarks, error analysis, noise robustness, and class-imbalance experiments:
+
+```bash
+# Run all experiments
+python -m experiments.run_all
+
+# Or run individual modules:
+python -m experiments.synthetic_experiments   # Synthetic benchmarks & K-value maps
+python -m experiments.error_analysis          # Prediction disagreement & error categorization
+python -m experiments.robustness_noise        # Feature-noise injection experiments
+python -m experiments.robustness_imbalance    # Class-imbalance & minority-recall analysis
+```
+
+All experimental results are saved to:
+* `results/tables/`: CSV metric tables (`synthetic_results.csv`, `error_analysis.csv`, `noise_results.csv`, `imbalance_results.csv`)
+* `results/figures/`: High-resolution figures and heatmaps (14 plots)
+
+Detailed empirical analysis and documentation can be found in [docs/robustness_synthetic_error_analysis.md](docs/robustness_synthetic_error_analysis.md).

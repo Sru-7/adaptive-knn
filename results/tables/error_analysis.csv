@@ -1,0 +1,4 @@
+dataset,best_fixed_k,total_queries,disagreements,ada_corrects,ada_errors,both_wrong,acc_adaptive,f1_adaptive,acc_fixed,f1_fixed
+two_density,3,150,2,0,2,0,0.9866666666666667,0.9866666666666667,1.0,1.0
+noisy_moons,9,150,2,0,2,0,0.96,0.959971535314001,0.9733333333333334,0.9733285917496444
+multi_density_blobs,1,200,0,0,0,0,0.995,0.994999499949995,0.995,0.994999499949995
