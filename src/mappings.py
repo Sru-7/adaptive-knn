@@ -1,21 +1,22 @@
-import numpy as np
+"""
+Backward-compatible wrapper re-exporting Member 7's mapping functions.
+"""
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+from member_7_mapping_strategies.mappings import (
+    linear_mapping,
+    quantile_mapping,
+    sigmoid_mapping,
+    threshold_mapping,
+)
 
-def inverse_density_mapping(local_distance, min_dist, max_dist, k_min, k_max):
-    """
-    Maps local distance to K. 
-    Dense regions (small distance) -> K approaches k_min
-    Sparse regions (large distance) -> K approaches k_max
-    """
-    # Prevent division by zero if all distances are identical
-    if max_dist == min_dist:
-        return k_min
-    
-    # Normalize the local distance to a [0, 1] scale
-    ratio = (local_distance - min_dist) / (max_dist - min_dist)
-    
-    # Scale this ratio to fit within the [k_min, k_max] range
-    k_adaptive = k_min + ratio * (k_max - k_min)
-    
-    # Round to an integer and enforce strict bounds in case of test set outliers
-    k_final = int(np.round(k_adaptive))
-    return max(k_min, min(k_final, k_max))
+# Alias for legacy compatibility
+inverse_density_mapping = linear_mapping
+
+__all__ = [
+    "linear_mapping",
+    "quantile_mapping",
+    "sigmoid_mapping",
+    "threshold_mapping",
+    "inverse_density_mapping",
+]

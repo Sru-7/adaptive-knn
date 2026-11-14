@@ -1,0 +1,4 @@
+Dataset,Key,Samples,Features,Classes,Class Breakdown,Imbalance Ratio,Mean 5-NN Dist,Dist Std,Min 5-NN Dist,Max 5-NN Dist,Density Ratio (Max/Min)
+Breast Cancer Wisconsin,breast_cancer,569,30,2,"{np.str_('malignant'): 212, np.str_('benign'): 357}",1.68,2.747,1.356,1.243,12.805,10.3
+UCI Glass Identification,glass,214,9,6,"{'Class_1': 70, 'Class_2': 76, 'Class_3': 17, 'Class_5': 13, 'Class_6': 9, 'Class_7': 29}",8.44,1.18,1.21,0.234,8.056,34.45
+UCI Heart Disease (Cleveland),heart_disease,303,13,2,"{'Absence': 164, 'Presence': 139}",1.18,2.465,0.681,1.003,5.007,4.99

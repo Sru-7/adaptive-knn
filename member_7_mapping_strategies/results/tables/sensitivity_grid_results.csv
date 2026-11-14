@@ -1,0 +1,136 @@
+Dataset,m,k_min,k_max,Val_Macro_F1,Val_Accuracy
+Breast Cancer Wisconsin,3,1,9,0.9422,0.9474
+Breast Cancer Wisconsin,3,1,15,0.9322,0.9386
+Breast Cancer Wisconsin,3,1,21,0.9322,0.9386
+Breast Cancer Wisconsin,3,3,9,0.9422,0.9474
+Breast Cancer Wisconsin,3,3,15,0.9322,0.9386
+Breast Cancer Wisconsin,3,3,21,0.9322,0.9386
+Breast Cancer Wisconsin,3,5,9,0.9422,0.9474
+Breast Cancer Wisconsin,3,5,15,0.9322,0.9386
+Breast Cancer Wisconsin,3,5,21,0.9322,0.9386
+Breast Cancer Wisconsin,5,1,9,0.9422,0.9474
+Breast Cancer Wisconsin,5,1,15,0.9322,0.9386
+Breast Cancer Wisconsin,5,1,21,0.9322,0.9386
+Breast Cancer Wisconsin,5,3,9,0.9422,0.9474
+Breast Cancer Wisconsin,5,3,15,0.9322,0.9386
+Breast Cancer Wisconsin,5,3,21,0.9322,0.9386
+Breast Cancer Wisconsin,5,5,9,0.9422,0.9474
+Breast Cancer Wisconsin,5,5,15,0.9322,0.9386
+Breast Cancer Wisconsin,5,5,21,0.9322,0.9386
+Breast Cancer Wisconsin,7,1,9,0.9422,0.9474
+Breast Cancer Wisconsin,7,1,15,0.9322,0.9386
+Breast Cancer Wisconsin,7,1,21,0.9322,0.9386
+Breast Cancer Wisconsin,7,3,9,0.9422,0.9474
+Breast Cancer Wisconsin,7,3,15,0.9322,0.9386
+Breast Cancer Wisconsin,7,3,21,0.9322,0.9386
+Breast Cancer Wisconsin,7,5,9,0.9422,0.9474
+Breast Cancer Wisconsin,7,5,15,0.9322,0.9386
+Breast Cancer Wisconsin,7,5,21,0.9322,0.9386
+Breast Cancer Wisconsin,10,1,9,0.9521,0.9561
+Breast Cancer Wisconsin,10,1,15,0.9221,0.9298
+Breast Cancer Wisconsin,10,1,21,0.9322,0.9386
+Breast Cancer Wisconsin,10,3,9,0.9422,0.9474
+Breast Cancer Wisconsin,10,3,15,0.9322,0.9386
+Breast Cancer Wisconsin,10,3,21,0.9322,0.9386
+Breast Cancer Wisconsin,10,5,9,0.9422,0.9474
+Breast Cancer Wisconsin,10,5,15,0.9322,0.9386
+Breast Cancer Wisconsin,10,5,21,0.9322,0.9386
+Breast Cancer Wisconsin,15,1,9,0.9521,0.9561
+Breast Cancer Wisconsin,15,1,15,0.9221,0.9298
+Breast Cancer Wisconsin,15,1,21,0.9322,0.9386
+Breast Cancer Wisconsin,15,3,9,0.9422,0.9474
+Breast Cancer Wisconsin,15,3,15,0.9221,0.9298
+Breast Cancer Wisconsin,15,3,21,0.9322,0.9386
+Breast Cancer Wisconsin,15,5,9,0.9422,0.9474
+Breast Cancer Wisconsin,15,5,15,0.9322,0.9386
+Breast Cancer Wisconsin,15,5,21,0.9322,0.9386
+UCI Glass Identification,3,1,9,0.459,0.6279
+UCI Glass Identification,3,1,15,0.3116,0.5581
+UCI Glass Identification,3,1,21,0.4274,0.5814
+UCI Glass Identification,3,3,9,0.4472,0.6047
+UCI Glass Identification,3,3,15,0.3028,0.5349
+UCI Glass Identification,3,3,21,0.4386,0.6047
+UCI Glass Identification,3,5,9,0.436,0.5814
+UCI Glass Identification,3,5,15,0.3028,0.5349
+UCI Glass Identification,3,5,21,0.4275,0.5814
+UCI Glass Identification,5,1,9,0.4695,0.6512
+UCI Glass Identification,5,1,15,0.4368,0.6047
+UCI Glass Identification,5,1,21,0.4263,0.5814
+UCI Glass Identification,5,3,9,0.4472,0.6047
+UCI Glass Identification,5,3,15,0.313,0.5581
+UCI Glass Identification,5,3,21,0.4274,0.5814
+UCI Glass Identification,5,5,9,0.4472,0.6047
+UCI Glass Identification,5,5,15,0.3124,0.5581
+UCI Glass Identification,5,5,21,0.4274,0.5814
+UCI Glass Identification,7,1,9,0.459,0.6279
+UCI Glass Identification,7,1,15,0.4275,0.5814
+UCI Glass Identification,7,1,21,0.4166,0.5581
+UCI Glass Identification,7,3,9,0.4585,0.6279
+UCI Glass Identification,7,3,15,0.313,0.5581
+UCI Glass Identification,7,3,21,0.4274,0.5814
+UCI Glass Identification,7,5,9,0.4472,0.6047
+UCI Glass Identification,7,5,15,0.3137,0.5581
+UCI Glass Identification,7,5,21,0.4175,0.5581
+UCI Glass Identification,10,1,9,0.4694,0.6512
+UCI Glass Identification,10,1,15,0.4275,0.5814
+UCI Glass Identification,10,1,21,0.4166,0.5581
+UCI Glass Identification,10,3,9,0.4585,0.6279
+UCI Glass Identification,10,3,15,0.3031,0.5349
+UCI Glass Identification,10,3,21,0.4263,0.5814
+UCI Glass Identification,10,5,9,0.4472,0.6047
+UCI Glass Identification,10,5,15,0.313,0.5581
+UCI Glass Identification,10,5,21,0.4175,0.5581
+UCI Glass Identification,15,1,9,0.4695,0.6512
+UCI Glass Identification,15,1,15,0.4375,0.6047
+UCI Glass Identification,15,1,21,0.4175,0.5581
+UCI Glass Identification,15,3,9,0.4483,0.6047
+UCI Glass Identification,15,3,15,0.427,0.5814
+UCI Glass Identification,15,3,21,0.4166,0.5581
+UCI Glass Identification,15,5,9,0.4472,0.6047
+UCI Glass Identification,15,5,15,0.427,0.5814
+UCI Glass Identification,15,5,21,0.4274,0.5814
+UCI Heart Disease (Cleveland),3,1,9,0.8357,0.8361
+UCI Heart Disease (Cleveland),3,1,15,0.835,0.8361
+UCI Heart Disease (Cleveland),3,1,21,0.8499,0.8525
+UCI Heart Disease (Cleveland),3,3,9,0.8195,0.8197
+UCI Heart Disease (Cleveland),3,3,15,0.835,0.8361
+UCI Heart Disease (Cleveland),3,3,21,0.8499,0.8525
+UCI Heart Disease (Cleveland),3,5,9,0.8195,0.8197
+UCI Heart Disease (Cleveland),3,5,15,0.835,0.8361
+UCI Heart Disease (Cleveland),3,5,21,0.8499,0.8525
+UCI Heart Disease (Cleveland),5,1,9,0.8028,0.8033
+UCI Heart Disease (Cleveland),5,1,15,0.8179,0.8197
+UCI Heart Disease (Cleveland),5,1,21,0.8499,0.8525
+UCI Heart Disease (Cleveland),5,3,9,0.8357,0.8361
+UCI Heart Disease (Cleveland),5,3,15,0.8179,0.8197
+UCI Heart Disease (Cleveland),5,3,21,0.8499,0.8525
+UCI Heart Disease (Cleveland),5,5,9,0.8195,0.8197
+UCI Heart Disease (Cleveland),5,5,15,0.8179,0.8197
+UCI Heart Disease (Cleveland),5,5,21,0.8499,0.8525
+UCI Heart Disease (Cleveland),7,1,9,0.7867,0.7869
+UCI Heart Disease (Cleveland),7,1,15,0.851,0.8525
+UCI Heart Disease (Cleveland),7,1,21,0.8499,0.8525
+UCI Heart Disease (Cleveland),7,3,9,0.8189,0.8197
+UCI Heart Disease (Cleveland),7,3,15,0.851,0.8525
+UCI Heart Disease (Cleveland),7,3,21,0.8499,0.8525
+UCI Heart Disease (Cleveland),7,5,9,0.8357,0.8361
+UCI Heart Disease (Cleveland),7,5,15,0.8179,0.8197
+UCI Heart Disease (Cleveland),7,5,21,0.8499,0.8525
+UCI Heart Disease (Cleveland),10,1,9,0.8189,0.8197
+UCI Heart Disease (Cleveland),10,1,15,0.835,0.8361
+UCI Heart Disease (Cleveland),10,1,21,0.8339,0.8361
+UCI Heart Disease (Cleveland),10,3,9,0.8028,0.8033
+UCI Heart Disease (Cleveland),10,3,15,0.851,0.8525
+UCI Heart Disease (Cleveland),10,3,21,0.8339,0.8361
+UCI Heart Disease (Cleveland),10,5,9,0.8357,0.8361
+UCI Heart Disease (Cleveland),10,5,15,0.8339,0.8361
+UCI Heart Disease (Cleveland),10,5,21,0.8339,0.8361
+UCI Heart Disease (Cleveland),15,1,9,0.8189,0.8197
+UCI Heart Disease (Cleveland),15,1,15,0.8357,0.8361
+UCI Heart Disease (Cleveland),15,1,21,0.835,0.8361
+UCI Heart Disease (Cleveland),15,3,9,0.8189,0.8197
+UCI Heart Disease (Cleveland),15,3,15,0.851,0.8525
+UCI Heart Disease (Cleveland),15,3,21,0.8339,0.8361
+UCI Heart Disease (Cleveland),15,5,9,0.8357,0.8361
+UCI Heart Disease (Cleveland),15,5,15,0.851,0.8525
+UCI Heart Disease (Cleveland),15,5,21,0.8339,0.8361

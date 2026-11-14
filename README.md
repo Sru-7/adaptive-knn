@@ -1,102 +1,103 @@
 # Adaptive KNN: Learning the Right Number of Neighbors
 
-## Setup Instructions
+Inspired by: Li, J., Xu, H., Zhang, S. (2026), *"Adaptive kNN graph model"*, *Nature Communications* 17, 7491.
 
-To run the code and experiments locally, follow these steps:
+---
 
-1. **Clone the repository:**
-git clone https://github.com/YOUR_USERNAME/adaptive-knn.git
-cd adaptive-knn
+## Member-Wise Project Architecture
 
+This project is organized **strictly member-wise** to support clear ownership, modularity, and reproducible benchmarking across three key datasets: **Breast Cancer Wisconsin**, **UCI Glass Identification**, and **UCI Heart Disease (Cleveland)**.
 
-2. **Create a virtual environment (using Anaconda):**
-conda create -n adaptive_knn python=3.10
-conda activate adaptive_knn
-
-
-3. **Install dependencies:**
-pip install -r requirements.txt
-
-
-
-## Project Overview
-
-K-Nearest Neighbors (KNN) is a simple and effective classification algorithm, but conventional KNN relies on one globally fixed neighborhood size for every query. This assumption can be inappropriate when different regions of a dataset possess varying local densities or class structures.
-
-This project explores whether dynamically selecting $K$ based on local data characteristics can improve KNN classification performance compared to using a single, globally fixed $K$.
-
-## Base Paper & Inspiration
-
-This project is inspired by the following 2026 Nature Communications paper:
-
-* **Paper:** Li, J., Xu, H., Zhang, S. (2026), "Adaptive kNN graph model," Nature Communications 17, 7491.
-
-
-* **Link:** [https://www.nature.com/articles/s41467-026-74296-2](https://www.nature.com/articles/s41467-026-74296-2)
-
-
-* **Original Code:** [https://github.com/Lijy207/kNN-Graph](https://github.com/Lijy207/kNN-Graph)
-
-
-* **Original Data/Code Archives:** Zenodo DOI 10.5281/zenodo.19531320 (datasets) and 10.5281/zenodo.20236665 (code release).
-
-
-
-**What the base paper does:** The original paper proposes a complex adaptive graph framework where neighborhood sizes and neighbor weights are learned for individual training samples. This learned information is then embedded into an Hierarchical Navigable Small World (HNSW) graph to shift the computational burden to the training stage.
-
-## Our Contribution & Methodology
-
-Instead of reproducing the complete, computationally heavy HNSW system from the reference paper, our project builds a simpler, semester-scale extension.
-
-**What we worked on:**
-Our main contribution is a lightweight adaptive-K classifier that extends the fixed-neighborhood KNN paradigm using local density calculations.
-
-The methodology includes:
-
-* **Local Density Estimation:** We estimate the local density around a query point by measuring distances to a small reference neighborhood.
-
-
-* **Adaptive Mapping:** That density is mapped to an adaptive $K$ value. Dense regions utilize smaller neighborhoods, while sparse regions utilize larger neighborhoods, all subject to predefined bounds.
-
-
-* **Voting Mechanisms:** The dynamically selected neighbors are then classified using either majority voting or distance-weighted voting.
-
-
-
-## Experiments and Evaluation
-
-To thoroughly test our lightweight adaptive classifier against standard baselines, we conduct a controlled empirical analysis to understand exactly when adaptive neighborhoods help or hurt.
-
-Our evaluation pipeline includes:
-
-* **Baseline Comparisons:** Comparing our model against standard KNN using fixed $K$ values (e.g., $K=1, 3, 5, 7, 9, 11, 15$) and distance-weighted KNN.
-
-
-* **Robustness Testing:** Evaluating the method's robustness to injected feature and point noise at several different levels.
-
-
-* **Imbalance & Density Analysis:** Conducting class-imbalance analysis and comparing performance across multiple public classification datasets with diverse dimensionalities, class distributions, and density structures.
-
-
-* **Metrics:** Evaluating performance using Accuracy, Precision, Recall, F1-score, confusion matrices, and runtime. We also analyze the average and distribution of the dynamically selected $K$ values across the feature space. Error analysis will examine cases where adaptive selection changes the prediction relative to the best fixed-K baseline.
-
-## Running the Experiments
-
-To run the complete suite of synthetic benchmarks, error analysis, noise robustness, and class-imbalance experiments:
-
-```bash
-# Run all experiments
-python -m experiments.run_all
-
-# Or run individual modules:
-python -m experiments.synthetic_experiments   # Synthetic benchmarks & K-value maps
-python -m experiments.error_analysis          # Prediction disagreement & error categorization
-python -m experiments.robustness_noise        # Feature-noise injection experiments
-python -m experiments.robustness_imbalance    # Class-imbalance & minority-recall analysis
+```
+adaptive-knn/
+├── member_1_adaptive_algorithm/          # Member 1: Adaptive algorithm, unit tests, bounds
+│   ├── adaptive_knn.py
+│   ├── test_adaptive_knn.py
+│   └── docs/methodology.md
+├── member_2_baseline_models/             # Member 2: Baseline suite (Fixed KNN, LogReg, SVM)
+│   ├── baselines.py
+│   ├── run_baselines.py
+│   ├── results/
+│   │   ├── baseline_comparison_tables.csv
+│   │   └── figures/
+│   └── docs/baselines_documentation.md
+├── member_3_dataset_preprocessing_eda/   # Member 3: Data loaders, preprocessing, EDA
+│   ├── data_loader.py
+│   ├── run_eda.py
+│   ├── results/
+│   │   ├── figures/
+│   │   └── tables/
+│   └── docs/eda_report.md
+├── member_4_robustness_imbalance/        # Member 4: Noise robustness & class imbalance
+│   ├── run_robustness.py
+│   ├── results/
+│   │   ├── figures/
+│   │   └── tables/
+│   └── docs/robustness_analysis.md
+├── member_5_synthetic_error_analysis/   # Member 5: Synthetic manifolds & error disagreement
+│   ├── synthetic_data.py
+│   ├── run_synthetic_and_error.py
+│   ├── results/
+│   │   ├── figures/
+│   │   └── tables/
+│   └── docs/error_analysis_report.md
+├── member_6_statistical_evaluation/     # Member 6: Paired tests, latency, reproducibility
+│   ├── statistical_tests.py
+│   ├── run_statistical_evaluation.py
+│   ├── results/
+│   │   ├── figures/
+│   │   └── tables/
+│   └── docs/statistical_evaluation_report.md
+├── member_7_mapping_strategies/          # Member 7: Linear/Quantile/Sigmoid/Threshold mappings
+│   ├── mappings.py
+│   ├── run_mapping_sensitivity.py
+│   ├── results/
+│   │   ├── figures/
+│   │   └── tables/
+│   └── docs/mapping_strategies_report.md
+├── data/                                 # Datasets (glass.data, processed.cleveland.data)
+├── run_all_member_experiments.py         # Master orchestrator
+└── COMPREHENSIVE_EVALUATION_REPORT.md    # Complete publication-grade report with figures
 ```
 
-All experimental results are saved to:
-* `results/tables/`: CSV metric tables (`synthetic_results.csv`, `error_analysis.csv`, `noise_results.csv`, `imbalance_results.csv`)
-* `results/figures/`: High-resolution figures and heatmaps (14 plots)
+---
 
-Detailed empirical analysis and documentation can be found in [docs/robustness_synthetic_error_analysis.md](docs/robustness_synthetic_error_analysis.md).
+## Quickstart: Running All Experiments
+
+To execute the entire member pipeline sequentially:
+
+```bash
+python run_all_member_experiments.py
+```
+
+### Running Individual Member Suites
+
+```bash
+# Member 1: Run unit tests
+python -m pytest member_1_adaptive_algorithm/test_adaptive_knn.py
+
+# Member 3: Preprocessing and Exploratory Data Analysis
+python -m member_3_dataset_preprocessing_eda.run_eda
+
+# Member 2: Baseline Models and Evaluation Framework
+python -m member_2_baseline_models.run_baselines
+
+# Member 4: Noise Robustness and Class Imbalance Sweeps
+python -m member_4_robustness_imbalance.run_robustness
+
+# Member 5: Synthetic Benchmarks and Prediction Disagreement
+python -m member_5_synthetic_error_analysis.run_synthetic_and_error
+
+# Member 7: Algorithmic Mapping Strategies and Sensitivity
+python -m member_7_mapping_strategies.run_mapping_sensitivity
+
+# Member 6: Statistical Significance and Final Integration
+python -m member_6_statistical_evaluation.run_statistical_evaluation
+```
+
+---
+
+## Detailed Evaluation Report
+
+The full experimental methodology, theoretical formulations, baseline comparisons, robustness curves, error analysis, and 15 evaluation graphs are documented in:
+👉 **[COMPREHENSIVE_EVALUATION_REPORT.md](COMPREHENSIVE_EVALUATION_REPORT.md)**
