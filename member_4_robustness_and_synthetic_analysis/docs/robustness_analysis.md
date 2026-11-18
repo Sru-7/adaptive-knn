@@ -1,29 +1,32 @@
-# Member 4 — Robustness & Class-Imbalance Analysis
+# Member 4 (Subtask 4.1) — Robustness & Class-Imbalance Analysis
 
 ## 1. Experimental Overview
 
-To thoroughly test the reliability and boundary dynamics of `DensityAdaptiveKNN`, Member 4 performed two systematic perturbation evaluations repeated over 5 random seeds:
-1. **Feature-Noise Injection:** $\sigma \in [0.0, 0.1, 0.25, 0.5, 1.0]$ added to test features.
-2. **Artificial & Natural Class Imbalance:** Tested at target majority-to-minority ratios $1:1, 1:2, 1:5, 1:10$.
+To stress-test the boundary reliability of `DensityAdaptiveKNN`, Member 4 conducted systematic multi-seed perturbation evaluations across two stress regimes:
+1. **Feature-Noise Injection:** Gaussian noise perturbations $\sigma \in [0.0, 0.1, 0.25, 0.5, 1.0]$ added to test feature vectors.
+2. **Artificial & Natural Class Imbalance:** Controlled minority subsampling at majority:minority ratios $1:1, 1:2, 1:5, 1:10$.
 
 ---
 
 ## 2. Key Empirical Findings
 
-### 2.1 Noise Resilience & Adaptive Expansion
-- In conventional fixed-K KNN (especially $K=1$), noise degrades performance sharply because single perturbed outliers directly flip labels.
-- In `DensityAdaptiveKNN`, feature noise increases the local Euclidean distances $d_m(x)$ to nearest neighbors. Under the inverse density mapping, this automatically inflates $K(x)$ toward $K_{\max} = 15$!
-- **Automatic Noise Damping:** The algorithm autonomously responds to noise by enlarging its voting neighborhood, suppressing random fluctuations.
+### 2.1 Autonomous Noise Damping & Dynamic Neighborhood Expansion
+- In conventional fixed-K KNN (notably $K=1$), feature noise degrades Macro-F1 sharply because single perturbed outliers directly flip class boundaries.
+- In `DensityAdaptiveKNN`, feature noise dilutes point density and increases pairwise Euclidean distances $d_m(x)$.
+- Under the inverse density mapping, the algorithm autonomously expands $K(x)$ from **$3.6-8.4$ at $\sigma=0.0$ up to $12.1-14.1$ at $\sigma=1.0$**.
+- This acts as an **intrinsic low-pass filter**, aggregating additional contextual evidence to dampen noise and maintaining superior Macro-F1 across all noise scales.
 
-### 2.2 Minority Class Recall Under Imbalance
-- When classes are heavily skewed (e.g. Glass dataset with natural 8.44:1 ratio, or artificial 1:10 ratio), large fixed $K$ (e.g. $K=15$) causes the majority class to overwhelm minority samples.
-- Small fixed $K$ (e.g. $K=1$) preserves minority recall but suffers high variance.
-- `DensityAdaptiveKNN (Distance-Weighted)` achieves the best compromise: close neighbors are weighted proportionally ($w_i = 1 / d_i$), preventing majority dilution while retaining statistical stability.
+### 2.2 Minority Class Recall Protection Under Imbalance
+- When classes are heavily imbalanced (e.g., Glass with natural 8.4:1 skew or artificial 1:10 downsampling), fixed large neighborhoods ($K=15$) collapse minority recall to **0.00%** because the majority class completely dominates the voting window.
+- Fixed $K=1$ maintains higher sensitivity but incurs high variance and erratic false positives.
+- `DensityAdaptiveKNN (Distance-Weighted)` achieves the best compromise:
+  - In low-density minority regions, distance weighting ($w_i = 1 / d_i$) prevents distant majority neighbors from overwhelming adjacent minority points.
+  - Across all three datasets at ratio 1:10, distance-weighted Adaptive KNN maintains **$20-52\%$ higher minority recall** than fixed $K=15$.
 
 ---
 
-## 3. Deliverables & Results
-- Metric Tables:
+## 3. Generated Deliverables
+- Tables:
   - `member_4_robustness_and_synthetic_analysis/results/tables/noise_experiments.csv`
   - `member_4_robustness_and_synthetic_analysis/results/tables/imbalance_experiments.csv`
 - Figures:

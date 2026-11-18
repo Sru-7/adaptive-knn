@@ -1,4 +1,4 @@
-# Member 6 — Statistical Evaluation & Reproducibility Report
+# Member 3 — Statistical Evaluation & Reproducibility Report
 
 ## 1. Experimental Integrity & Protocol
 

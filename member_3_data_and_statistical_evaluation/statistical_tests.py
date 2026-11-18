@@ -1,5 +1,5 @@
 """
-Member 6: Statistical Significance Testing & Reproducibility Suite
+Member 3: Statistical Significance Testing & Reproducibility Suite
 ==================================================================
 
 Provides rigorous statistical hypothesis testing across repeated runs:

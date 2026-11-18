@@ -1,5 +1,5 @@
 """
-Member 6: Statistical Evaluation & Multi-Seed Benchmarking Runner
+Member 3: Statistical Evaluation & Multi-Seed Benchmarking Runner
 ================================================================
 
 Conducts repeated runs over 5 random seeds (42, 123, 456, 789, 1024) across:
@@ -34,10 +34,11 @@ from member_3_data_and_statistical_evaluation.statistical_tests import compute_p
 
 SEEDS = [42, 123, 456, 789, 1024]
 
-RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results")
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+RESULTS_DIR = os.path.join(CURRENT_DIR, "results")
 FIG_DIR = os.path.join(RESULTS_DIR, "figures")
 TAB_DIR = os.path.join(RESULTS_DIR, "tables")
-DOCS_DIR = os.path.join(os.path.dirname(__file__), "docs")
+DOCS_DIR = os.path.join(CURRENT_DIR, "docs")
 
 os.makedirs(FIG_DIR, exist_ok=True)
 os.makedirs(TAB_DIR, exist_ok=True)
@@ -46,7 +47,7 @@ os.makedirs(DOCS_DIR, exist_ok=True)
 
 def run_multi_seed_benchmarks():
     print("=" * 65)
-    print("Member 6: Executing Statistical Evaluation & Reproducibility Suite")
+    print("Member 3 Subtask 3.2: Statistical Significance & Latency Evaluation")
     print("=" * 65)
 
     datasets = get_all_datasets()
@@ -176,9 +177,20 @@ def run_multi_seed_benchmarks():
         sub_d = df_seeds[df_seeds["Dataset"] == d_info["name"]]
         data_to_plot = [sub_d[sub_d["Model"] == m]["Macro_F1"].values for m in models_order]
 
-        ax.boxplot(data_to_plot, tick_labels=[
+        bp = ax.boxplot(data_to_plot, tick_labels=[
             "Adaptive\n(Optimized)", "Adaptive\n(Default)", "Tuned\nKNN", "Fixed\nK=5", "LogReg", "RBF\nSVM"
-        ], patch_artist=True, boxprops=dict(facecolor="#c6dbef", color="#1f77b4"))
+        ], patch_artist=True)
+        
+        box_colors = ["#10B981", "#6EE7B7", "#93C5FD", "#60A5FA", "#CBD5E1", "#94A3B8"]
+        for patch, color in zip(bp['boxes'], box_colors):
+            patch.set_facecolor(color)
+            patch.set_edgecolor("#1E293B")
+            patch.set_alpha(0.85)
+            
+        for median in bp['medians']:
+            median.set_color("#0F172A")
+            median.set_linewidth(1.8)
+
         ax.set_title(f"{d_info['name']}\nMacro-F1 Variance across 5 Seeds", fontweight="bold", fontsize=11)
         ax.set_ylabel("Macro-F1 Score")
         ax.grid(axis="y", linestyle="--", alpha=0.6)
@@ -194,7 +206,8 @@ def run_multi_seed_benchmarks():
     # -------------------------------------------------------------
     fig, ax = plt.subplots(figsize=(9, 4.5))
     lat_summary = df_seeds.groupby("Model")["Pred_Latency_ms"].mean().loc[models_order]
-    bars = ax.barh(lat_summary.index, lat_summary.values, color="#3182bd", alpha=0.85, edgecolor="black")
+    bar_colors = ["#10B981", "#34D399", "#3B82F6", "#60A5FA", "#94A3B8", "#64748B"]
+    bars = ax.barh(lat_summary.index, lat_summary.values, color=bar_colors, alpha=0.88, edgecolor="black")
     ax.set_xlabel("Predict Latency (milliseconds per query sample)", fontweight="bold")
     ax.set_title("Runtime Benchmark: Inference Latency across Models", fontweight="bold", fontsize=12)
     ax.grid(axis="x", linestyle="--", alpha=0.6)
@@ -212,7 +225,7 @@ def run_multi_seed_benchmarks():
     # Write documentation
     doc_path = os.path.join(DOCS_DIR, "statistical_evaluation_report.md")
     with open(doc_path, "w") as f:
-        f.write(f"""# Member 6 — Statistical Evaluation & Reproducibility Report
+        f.write(f"""# Member 3 — Statistical Evaluation & Reproducibility Report
 
 ## 1. Experimental Integrity & Protocol
 
@@ -256,12 +269,12 @@ Full test statistics saved to:
   - `member_3_data_and_statistical_evaluation/results/figures/metric_variance_boxplots.png`
   - `member_3_data_and_statistical_evaluation/results/figures/runtime_latency_comparison.png`
 """)
-    print("Member 6 report written.")
+    print("Member 3 statistical report written.")
 
 
 def main():
     run_multi_seed_benchmarks()
-    print("Member 6 completed successfully.")
+    print("Member 3 statistical evaluation completed successfully.")
 
 
 if __name__ == "__main__":

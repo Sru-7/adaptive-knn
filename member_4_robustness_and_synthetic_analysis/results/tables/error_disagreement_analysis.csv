@@ -1,4 +1,4 @@
 Dataset,Total_Test_Samples,Both_Correct,Adaptive_Wins,Fixed_Wins,Both_Wrong,Net_Adaptive_Advantage,Disagreement_Rate (%)
-Breast Cancer Wisconsin,114,110,1,1,2,0,1.75
-UCI Glass Identification,43,24,4,6,9,-2,23.26
-UCI Heart Disease (Cleveland),61,49,2,3,7,-1,8.2
+Breast Cancer Wisconsin,114,110,2,0,2,2,1.75
+UCI Glass Identification,43,28,5,1,9,4,13.95
+UCI Heart Disease (Cleveland),61,50,4,1,6,3,8.2

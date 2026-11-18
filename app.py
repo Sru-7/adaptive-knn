@@ -501,7 +501,10 @@ with tab2:
                 "Accuracy": "{:.2f}%",
                 "Macro_F1": "{:.2f}%",
                 "Balanced_Acc": "{:.2f}%"
-            }).highlight_max(subset=["Accuracy", "Macro_F1", "Balanced_Acc"], color="#D1FAE5"),
+            }).highlight_max(
+                subset=["Accuracy", "Macro_F1", "Balanced_Acc"],
+                props="background-color: #065F46; color: #FFFFFF; font-weight: bold;"
+            ),
             use_container_width=True
         )
         
@@ -622,10 +625,16 @@ with tab4:
             "Fixed K=5 Recall": recalls_fixed,
             "Adaptive KNN Recall": recalls_adap
         })
-        st.dataframe(df_rec.style.format({
-            "Fixed K=5 Recall": "{:.1f}%",
-            "Adaptive KNN Recall": "{:.1f}%"
-        }).highlight_max(subset=["Fixed K=5 Recall", "Adaptive KNN Recall"], color="#D1FAE5"), use_container_width=True)
+        st.dataframe(
+            df_rec.style.format({
+                "Fixed K=5 Recall": "{:.1f}%",
+                "Adaptive KNN Recall": "{:.1f}%"
+            }).highlight_max(
+                subset=["Fixed K=5 Recall", "Adaptive KNN Recall"],
+                props="background-color: #065F46; color: #FFFFFF; font-weight: bold;"
+            ),
+            use_container_width=True
+        )
 
 
 # -----------------------------------------------------------------------------

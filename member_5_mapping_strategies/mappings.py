@@ -1,5 +1,5 @@
 """
-Member 7: Algorithmic Mapping Strategies & Theoretical Formulations
+Member 5: Algorithmic Mapping Strategies & Theoretical Formulations
 ===================================================================
 
 Provides alternative mathematical transformations from local distance d_m(x)

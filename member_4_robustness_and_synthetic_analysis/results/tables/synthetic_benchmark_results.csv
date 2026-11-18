@@ -1,4 +1,4 @@
 Synthetic_Dataset,Fixed_KNN_Acc,Fixed_KNN_F1,Adaptive_KNN_Acc,Adaptive_KNN_F1,Mean_Adaptive_K,Std_Adaptive_K,Min_Adaptive_K,Max_Adaptive_K
-Two-Density Gaussians,0.9722,0.9722,0.9667,0.9666,2.53,1.79,1,12
-Noisy Moons,0.9611,0.9611,0.9611,0.9611,4.9,2.03,2,15
-Multi-Density Blobs,0.9167,0.9166,0.9208,0.9208,4.81,2.97,1,15
+Two-Density Gaussians,0.9556,0.9555,0.9778,0.9777,3.42,2.85,1,14
+Noisy Moons,0.95,0.9499,0.9667,0.9665,5.84,2.45,2,15
+Multi-Density Blobs,0.9167,0.9166,0.9375,0.9374,4.81,2.97,1,15

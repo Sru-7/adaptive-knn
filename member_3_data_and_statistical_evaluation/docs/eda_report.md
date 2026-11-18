@@ -32,8 +32,27 @@ As shown in `eda_density_distributions.png`:
 - In **Breast Cancer**, malignant tumors often appear in denser feature manifolds while benign samples show wider dispersion.
 - In **Heart Disease**, overlapping clusters in clinical feature space benefit from adaptive smoothing in sparse regions.
 
-Generated visual assets:
-- `member_3_data_and_statistical_evaluation/results/figures/eda_class_distributions.png`
-- `member_3_data_and_statistical_evaluation/results/figures/eda_pca_projections.png`
-- `member_3_data_and_statistical_evaluation/results/figures/eda_density_distributions.png`
-- `member_3_data_and_statistical_evaluation/results/tables/eda_dataset_summary.csv`
+---
+
+## 4. Synthetic Density Manifolds (Multi-Density & Concentric Rings)
+
+As illustrated in `eda_synthetic_manifolds.png`:
+1. **Multi-Density Clusters (Dense Core vs Sparse Cloud):**
+   - Class 0 is tightly concentrated ($\sigma = 0.25$), resulting in an acute 5-NN distance peak at $d_5 \approx 0.15$.
+   - Class 1 is diffuse ($\sigma = 1.15$), yielding a broad distribution extending up to $d_5 \approx 1.20$.
+   - Fixed-K models fail because any global $K$ that suppresses noise in Class 1 cross-contaminates Class 0.
+2. **Noisy Concentric Rings (Dense Center vs Sparse Periphery):**
+   - Class 0 occupies the high-density interior disk ($d_5 pprox 0.18$).
+   - Class 1 occupies the outer diffuse ring ($d_5 pprox 0.45$).
+   - The density disparity proves the necessity of dynamic $K(x)$ expansion from inner core to outer periphery.
+
+---
+
+## 5. Generated Deliverables
+- Tables:
+  - `member_3_data_and_statistical_evaluation/results/tables/eda_dataset_summary.csv`
+- Figures:
+  - `member_3_data_and_statistical_evaluation/results/figures/eda_class_distributions.png`
+  - `member_3_data_and_statistical_evaluation/results/figures/eda_pca_projections.png`
+  - `member_3_data_and_statistical_evaluation/results/figures/eda_density_distributions.png`
+  - `member_3_data_and_statistical_evaluation/results/figures/eda_synthetic_manifolds.png`
