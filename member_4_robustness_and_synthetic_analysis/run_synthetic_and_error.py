@@ -25,8 +25,8 @@ from sklearn.metrics import accuracy_score, f1_score
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from member_1_adaptive_algorithm.adaptive_knn import DensityAdaptiveKNN
-from member_3_dataset_preprocessing_eda.data_loader import get_all_datasets, get_train_val_test_splits
-from member_5_synthetic_error_analysis.synthetic_data import (
+from member_3_data_and_statistical_evaluation.data_loader import get_all_datasets, get_train_val_test_splits
+from member_4_robustness_and_synthetic_analysis.synthetic_data import (
     make_two_density_data,
     make_noisy_moons_data,
     make_multi_density_blobs_data,
@@ -228,11 +228,11 @@ We decomposed test predictions between `DensityAdaptiveKNN` and the best fixed-K
 
 ## 3. Generated Deliverables
 - Tables:
-  - `member_5_synthetic_error_analysis/results/tables/synthetic_benchmark_results.csv`
-  - `member_5_synthetic_error_analysis/results/tables/error_disagreement_analysis.csv`
+  - `member_4_robustness_and_synthetic_analysis/results/tables/synthetic_benchmark_results.csv`
+  - `member_4_robustness_and_synthetic_analysis/results/tables/error_disagreement_analysis.csv`
 - Figures:
-  - `member_5_synthetic_error_analysis/results/figures/synthetic_decision_boundaries_and_k_maps.png`
-  - `member_5_synthetic_error_analysis/results/figures/disagreement_breakdown_real_datasets.png`
+  - `member_4_robustness_and_synthetic_analysis/results/figures/synthetic_decision_boundaries_and_k_maps.png`
+  - `member_4_robustness_and_synthetic_analysis/results/figures/disagreement_breakdown_real_datasets.png`
 """)
     print("Member 5 report written.")
 

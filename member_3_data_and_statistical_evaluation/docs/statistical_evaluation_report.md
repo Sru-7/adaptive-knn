@@ -16,14 +16,14 @@ To eliminate random splitting artifacts and establish rigorous statistical valid
 ## 2. Integrated Multi-Seed Results (Mean ± Std)
 
 Detailed metrics saved to:
-`member_6_statistical_evaluation/results/tables/integrated_statistical_summary.csv`
+`member_3_data_and_statistical_evaluation/results/tables/integrated_statistical_summary.csv`
 
 ---
 
 ## 3. Statistical Significance Findings
 
 Full test statistics saved to:
-`member_6_statistical_evaluation/results/tables/statistical_significance_tests.csv`
+`member_3_data_and_statistical_evaluation/results/tables/statistical_significance_tests.csv`
 
 ### Key Takeaways:
 1. **UCI Glass Identification:**
@@ -35,9 +35,9 @@ Full test statistics saved to:
 
 ## 4. Deliverables
 - Tables:
-  - `member_6_statistical_evaluation/results/tables/repeated_seed_raw_metrics.csv`
-  - `member_6_statistical_evaluation/results/tables/integrated_statistical_summary.csv`
-  - `member_6_statistical_evaluation/results/tables/statistical_significance_tests.csv`
+  - `member_3_data_and_statistical_evaluation/results/tables/repeated_seed_raw_metrics.csv`
+  - `member_3_data_and_statistical_evaluation/results/tables/integrated_statistical_summary.csv`
+  - `member_3_data_and_statistical_evaluation/results/tables/statistical_significance_tests.csv`
 - Figures:
-  - `member_6_statistical_evaluation/results/figures/metric_variance_boxplots.png`
-  - `member_6_statistical_evaluation/results/figures/runtime_latency_comparison.png`
+  - `member_3_data_and_statistical_evaluation/results/figures/metric_variance_boxplots.png`
+  - `member_3_data_and_statistical_evaluation/results/figures/runtime_latency_comparison.png`

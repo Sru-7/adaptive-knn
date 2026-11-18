@@ -3,7 +3,7 @@ Backward-compatible wrapper re-exporting Member 7's mapping functions.
 """
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from member_7_mapping_strategies.mappings import (
+from member_5_mapping_strategies.mappings import (
     linear_mapping,
     quantile_mapping,
     sigmoid_mapping,

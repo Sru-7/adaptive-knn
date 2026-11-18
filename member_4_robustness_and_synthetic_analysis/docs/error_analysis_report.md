@@ -30,8 +30,8 @@ We decomposed test predictions between `DensityAdaptiveKNN` and the best fixed-K
 
 ## 3. Generated Deliverables
 - Tables:
-  - `member_5_synthetic_error_analysis/results/tables/synthetic_benchmark_results.csv`
-  - `member_5_synthetic_error_analysis/results/tables/error_disagreement_analysis.csv`
+  - `member_4_robustness_and_synthetic_analysis/results/tables/synthetic_benchmark_results.csv`
+  - `member_4_robustness_and_synthetic_analysis/results/tables/error_disagreement_analysis.csv`
 - Figures:
-  - `member_5_synthetic_error_analysis/results/figures/synthetic_decision_boundaries_and_k_maps.png`
-  - `member_5_synthetic_error_analysis/results/figures/disagreement_breakdown_real_datasets.png`
+  - `member_4_robustness_and_synthetic_analysis/results/figures/synthetic_decision_boundaries_and_k_maps.png`
+  - `member_4_robustness_and_synthetic_analysis/results/figures/disagreement_breakdown_real_datasets.png`

@@ -33,7 +33,7 @@ As shown in `eda_density_distributions.png`:
 - In **Heart Disease**, overlapping clusters in clinical feature space benefit from adaptive smoothing in sparse regions.
 
 Generated visual assets:
-- `member_3_dataset_preprocessing_eda/results/figures/eda_class_distributions.png`
-- `member_3_dataset_preprocessing_eda/results/figures/eda_pca_projections.png`
-- `member_3_dataset_preprocessing_eda/results/figures/eda_density_distributions.png`
-- `member_3_dataset_preprocessing_eda/results/tables/eda_dataset_summary.csv`
+- `member_3_data_and_statistical_evaluation/results/figures/eda_class_distributions.png`
+- `member_3_data_and_statistical_evaluation/results/figures/eda_pca_projections.png`
+- `member_3_data_and_statistical_evaluation/results/figures/eda_density_distributions.png`
+- `member_3_data_and_statistical_evaluation/results/tables/eda_dataset_summary.csv`

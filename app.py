@@ -634,15 +634,13 @@ with tab4:
 with tab5:
     st.subheader("📑 Member-Wise Academic Architecture")
     st.markdown(r"""
-    This project is structured **member-wise** across seven dedicated research modules:
+    This project is structured **member-wise** across five dedicated research modules:
     
-    * **Member 1 (Algorithm Development):** `member_1_adaptive_algorithm/` — Density-Adaptive formulation, bounded neighborhood clipping, scikit-learn compatibility.
-    * **Member 2 (Baselines):** `member_2_baseline_models/` — Fixed KNN ($K=1..15$), Validation-Tuned KNN, Logistic Regression, Linear and RBF SVMs.
-    * **Member 3 (EDA & Preprocessing):** `member_3_dataset_preprocessing_eda/` — Preprocessing for Breast Cancer, UCI Glass, and UCI Heart Disease.
-    * **Member 4 (Robustness):** `member_4_robustness_imbalance/` — Gaussian noise sweeps ($\sigma \in [0.0, 1.0]$) and artificial imbalance ratios ($1:1$ to $1:10$).
-    * **Member 5 (Synthetic & Error Analysis):** `member_5_synthetic_error_analysis/` — 2D spatial manifolds, K-value heatmaps, and prediction disagreement breakdown.
-    * **Member 6 (Statistical Evaluation):** `member_6_statistical_evaluation/` — Multi-seed repeated runs, Paired t-tests ($p < 0.05$), Wilcoxon signed-rank tests, Cohen's $d$, and latency profiling ($< 0.09$ ms/query).
-    * **Member 7 (Mapping Strategies):** `member_7_mapping_strategies/` — Linear, Quantile (Rank-Based), Sigmoidal Logistic, and Step Threshold mappings.
+    * **Member 1 (Algorithm Development):** `member_1_adaptive_algorithm/` — Density-Adaptive neighborhood formulation, dynamic bounds clipping $K \in [K_{\min}, K_{\max}]$, and scikit-learn compatibility.
+    * **Member 2 (Baselines):** `member_2_baseline_models/` — Fixed-K baselines ($K=1..15$), Validation-Tuned KNN, Logistic Regression, Linear and RBF SVMs.
+    * **Member 3 (Dataset Preprocessing, EDA & Statistical Evaluation):** `member_3_data_and_statistical_evaluation/` — Multi-dataset curation (Breast Cancer, UCI Glass, Heart Disease), density heterogeneity EDA, multi-seed repeated hypothesis tests ($p < 0.05$), Wilcoxon signed-rank tests, Cohen's $d$, and latency profiling ($< 0.09$ ms/query).
+    * **Member 4 (Robustness, Imbalance, Synthetic Manifolds & Error Analysis):** `member_4_robustness_and_synthetic_analysis/` — Gaussian noise sweeps ($\sigma \in [0.0, 1.0]$), class imbalance stress-tests ($1:1$ to $1:10$), 2D spatial manifolds, $K(x)$ decision heatmaps, and prediction disagreement breakdown.
+    * **Member 5 (Mapping Strategies & Sensitivity):** `member_5_mapping_strategies/` — Linear, Quantile (Rank-Based), Sigmoidal Logistic, and Step Threshold density mappings, with comprehensive sensitivity grid search over $m, K_{\min}, K_{\max}$.
     
     ---
     ### 🔬 Mathematical Formulation
@@ -652,4 +650,4 @@ with tab5:
     """)
 
 st.sidebar.markdown("---")
-st.sidebar.caption("Adaptive KNN Research Group | Google Deepmind Agentic Architecture")
+st.sidebar.caption("Adaptive KNN Research Group | 5-Member Architecture")

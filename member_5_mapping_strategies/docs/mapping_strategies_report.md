@@ -45,9 +45,9 @@ We developed and systematically investigated four distinct transformation mechan
 
 ## 4. Generated Deliverables
 - Tables:
-  - `member_7_mapping_strategies/results/tables/mapping_comparison.csv`
-  - `member_7_mapping_strategies/results/tables/sensitivity_grid_results.csv`
+  - `member_5_mapping_strategies/results/tables/mapping_comparison.csv`
+  - `member_5_mapping_strategies/results/tables/sensitivity_grid_results.csv`
 - Figures:
-  - `member_7_mapping_strategies/results/figures/mapping_curves.png`
-  - `member_7_mapping_strategies/results/figures/mapping_comparison_bars.png`
-  - `member_7_mapping_strategies/results/figures/sensitivity_heatmaps.png`
+  - `member_5_mapping_strategies/results/figures/mapping_curves.png`
+  - `member_5_mapping_strategies/results/figures/mapping_comparison_bars.png`
+  - `member_5_mapping_strategies/results/figures/sensitivity_heatmaps.png`

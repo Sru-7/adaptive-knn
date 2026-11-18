@@ -23,7 +23,7 @@ from sklearn.neighbors import NearestNeighbors
 
 # Import data loaders
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from member_3_dataset_preprocessing_eda.data_loader import get_all_datasets
+from member_3_data_and_statistical_evaluation.data_loader import get_all_datasets
 
 RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results")
 FIG_DIR = os.path.join(RESULTS_DIR, "figures")
@@ -196,15 +196,18 @@ As shown in `eda_density_distributions.png`:
 - In **Heart Disease**, overlapping clusters in clinical feature space benefit from adaptive smoothing in sparse regions.
 
 Generated visual assets:
-- `member_3_dataset_preprocessing_eda/results/figures/eda_class_distributions.png`
-- `member_3_dataset_preprocessing_eda/results/figures/eda_pca_projections.png`
-- `member_3_dataset_preprocessing_eda/results/figures/eda_density_distributions.png`
-- `member_3_dataset_preprocessing_eda/results/tables/eda_dataset_summary.csv`
+- `member_3_data_and_statistical_evaluation/results/figures/eda_class_distributions.png`
+- `member_3_data_and_statistical_evaluation/results/figures/eda_pca_projections.png`
+- `member_3_data_and_statistical_evaluation/results/figures/eda_density_distributions.png`
+- `member_3_data_and_statistical_evaluation/results/tables/eda_dataset_summary.csv`
 """
     with open(os.path.join(DOCS_DIR, "eda_report.md"), "w") as f:
         f.write(md_content)
     print("EDA markdown report written.")
 
 
-if __name__ == "__main__":
+def main():
     run_eda()
+
+if __name__ == "__main__":
+    main()

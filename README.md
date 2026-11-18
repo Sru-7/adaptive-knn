@@ -18,7 +18,7 @@ streamlit run app.py
 2. **📊 Interactive Benchmark Dashboard:** Compare Adaptive KNN against Fixed-K ($K \in [1, 3, 5, 7, 9, 11, 15]$) across Real UCI benchmarks and complex synthetic manifolds with **satisfying +8% to +18% gains**.
 3. **🎯 Live Point Inspector & Disagreement Explorer:** Click or slide any coordinate $(X_1, X_2)$ to visualize its $K$ neighbors, distance weights, and see exactly where Fixed KNN fails and Adaptive KNN succeeds.
 4. **🛡️ Real-Time Noise & Imbalance Stress-Testing:** Real-time sliders for Gaussian feature noise ($\sigma \in [0, 1]$) and class imbalance ($1:1$ to $1:10$), watching minority class recall stay protected.
-5. **📑 Member-Wise Academic Architecture:** Full documentation of Members 1 through 7 methodologies, mathematical formulas, and statistical significance tests ($p < 0.05$).
+5. **📑 Member-Wise Academic Architecture:** Full documentation of Members 1 through 5 methodologies, mathematical formulas, and statistical significance tests ($p < 0.05$).
 
 ---
 
@@ -39,26 +39,26 @@ adaptive-knn/
 │   ├── run_baselines.py
 │   ├── results/baseline_comparison_tables.csv
 │   └── docs/baselines_documentation.md
-├── member_3_dataset_preprocessing_eda/   # Member 3: Data loaders, preprocessing, EDA
+├── member_3_data_and_statistical_evaluation/   # Member 3: Data loaders, preprocessing, EDA
 │   ├── data_loader.py
 │   ├── run_eda.py
 │   ├── results/ (figures & tables)
 │   └── docs/eda_report.md
-├── member_4_robustness_imbalance/        # Member 4: Noise robustness & class imbalance
+├── member_4_robustness_and_synthetic_analysis/        # Member 4: Noise robustness & class imbalance
 │   ├── run_robustness.py
 │   ├── results/ (figures & tables)
 │   └── docs/robustness_analysis.md
-├── member_5_synthetic_error_analysis/   # Member 5: Synthetic manifolds & error disagreement
+├── member_4_robustness_and_synthetic_analysis/   # Member 5: Synthetic manifolds & error disagreement
 │   ├── synthetic_data.py
 │   ├── run_synthetic_and_error.py
 │   ├── results/ (figures & tables)
 │   └── docs/error_analysis_report.md
-├── member_6_statistical_evaluation/     # Member 6: Paired tests, latency, reproducibility
+├── member_3_data_and_statistical_evaluation/     # Member 6: Paired tests, latency, reproducibility
 │   ├── statistical_tests.py
 │   ├── run_statistical_evaluation.py
 │   ├── results/ (figures & tables)
 │   └── docs/statistical_evaluation_report.md
-├── member_7_mapping_strategies/          # Member 7: Linear, Quantile, Sigmoidal mappings
+├── member_5_mapping_strategies/          # Member 7: Linear, Quantile, Sigmoidal mappings
 │   ├── mappings.py
 │   ├── run_mapping_sensitivity.py
 │   ├── results/ (figures & tables)
@@ -85,22 +85,22 @@ python run_all_member_experiments.py
 python -m pytest member_1_adaptive_algorithm/test_adaptive_knn.py
 
 # Member 3: Preprocessing and Exploratory Data Analysis
-python -m member_3_dataset_preprocessing_eda.run_eda
+python -m member_3_data_and_statistical_evaluation.run_eda
 
 # Member 2: Baseline Models and Evaluation Framework
 python -m member_2_baseline_models.run_baselines
 
 # Member 4: Noise Robustness and Class Imbalance Sweeps
-python -m member_4_robustness_imbalance.run_robustness
+python -m member_4_robustness_and_synthetic_analysis.run_robustness
 
 # Member 5: Synthetic Benchmarks and Prediction Disagreement
-python -m member_5_synthetic_error_analysis.run_synthetic_and_error
+python -m member_4_robustness_and_synthetic_analysis.run_synthetic_and_error
 
 # Member 7: Algorithmic Mapping Strategies and Sensitivity
-python -m member_7_mapping_strategies.run_mapping_sensitivity
+python -m member_5_mapping_strategies.run_mapping_sensitivity
 
 # Member 6: Statistical Significance and Final Integration
-python -m member_6_statistical_evaluation.run_statistical_evaluation
+python -m member_3_data_and_statistical_evaluation.run_statistical_evaluation
 ```
 
 ---

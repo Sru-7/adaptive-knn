@@ -29,8 +29,8 @@ from sklearn.metrics import accuracy_score, f1_score, balanced_accuracy_score
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from member_1_adaptive_algorithm.adaptive_knn import DensityAdaptiveKNN
 from member_2_baseline_models.baselines import tune_fixed_knn
-from member_3_dataset_preprocessing_eda.data_loader import get_all_datasets, get_train_val_test_splits
-from member_6_statistical_evaluation.statistical_tests import compute_paired_tests
+from member_3_data_and_statistical_evaluation.data_loader import get_all_datasets, get_train_val_test_splits
+from member_3_data_and_statistical_evaluation.statistical_tests import compute_paired_tests
 
 SEEDS = [42, 123, 456, 789, 1024]
 
@@ -230,14 +230,14 @@ To eliminate random splitting artifacts and establish rigorous statistical valid
 ## 2. Integrated Multi-Seed Results (Mean ± Std)
 
 Detailed metrics saved to:
-`member_6_statistical_evaluation/results/tables/integrated_statistical_summary.csv`
+`member_3_data_and_statistical_evaluation/results/tables/integrated_statistical_summary.csv`
 
 ---
 
 ## 3. Statistical Significance Findings
 
 Full test statistics saved to:
-`member_6_statistical_evaluation/results/tables/statistical_significance_tests.csv`
+`member_3_data_and_statistical_evaluation/results/tables/statistical_significance_tests.csv`
 
 ### Key Takeaways:
 1. **UCI Glass Identification:**
@@ -249,12 +249,12 @@ Full test statistics saved to:
 
 ## 4. Deliverables
 - Tables:
-  - `member_6_statistical_evaluation/results/tables/repeated_seed_raw_metrics.csv`
-  - `member_6_statistical_evaluation/results/tables/integrated_statistical_summary.csv`
-  - `member_6_statistical_evaluation/results/tables/statistical_significance_tests.csv`
+  - `member_3_data_and_statistical_evaluation/results/tables/repeated_seed_raw_metrics.csv`
+  - `member_3_data_and_statistical_evaluation/results/tables/integrated_statistical_summary.csv`
+  - `member_3_data_and_statistical_evaluation/results/tables/statistical_significance_tests.csv`
 - Figures:
-  - `member_6_statistical_evaluation/results/figures/metric_variance_boxplots.png`
-  - `member_6_statistical_evaluation/results/figures/runtime_latency_comparison.png`
+  - `member_3_data_and_statistical_evaluation/results/figures/metric_variance_boxplots.png`
+  - `member_3_data_and_statistical_evaluation/results/figures/runtime_latency_comparison.png`
 """)
     print("Member 6 report written.")
 

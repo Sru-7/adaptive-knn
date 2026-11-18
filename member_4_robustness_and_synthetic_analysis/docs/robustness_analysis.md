@@ -24,9 +24,9 @@ To thoroughly test the reliability and boundary dynamics of `DensityAdaptiveKNN`
 
 ## 3. Deliverables & Results
 - Metric Tables:
-  - `member_4_robustness_imbalance/results/tables/noise_experiments.csv`
-  - `member_4_robustness_imbalance/results/tables/imbalance_experiments.csv`
+  - `member_4_robustness_and_synthetic_analysis/results/tables/noise_experiments.csv`
+  - `member_4_robustness_and_synthetic_analysis/results/tables/imbalance_experiments.csv`
 - Figures:
-  - `member_4_robustness_imbalance/results/figures/noise_robustness_curves.png`
-  - `member_4_robustness_imbalance/results/figures/adaptive_k_under_noise.png`
-  - `member_4_robustness_imbalance/results/figures/minority_recall_heatmaps.png`
+  - `member_4_robustness_and_synthetic_analysis/results/figures/noise_robustness_curves.png`
+  - `member_4_robustness_and_synthetic_analysis/results/figures/adaptive_k_under_noise.png`
+  - `member_4_robustness_and_synthetic_analysis/results/figures/minority_recall_heatmaps.png`

@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from member_1_adaptive_algorithm.adaptive_knn import DensityAdaptiveKNN
 from member_2_baseline_models.baselines import get_all_models, evaluate_predictions, K_GRID
-from member_3_dataset_preprocessing_eda.data_loader import get_all_datasets, get_train_val_test_splits
+from member_3_data_and_statistical_evaluation.data_loader import get_all_datasets, get_train_val_test_splits
 
 RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results")
 FIG_DIR = os.path.join(RESULTS_DIR, "figures")

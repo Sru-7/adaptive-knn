@@ -24,8 +24,8 @@ from sklearn.metrics import accuracy_score, f1_score, balanced_accuracy_score
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from member_1_adaptive_algorithm.adaptive_knn import DensityAdaptiveKNN
-from member_3_dataset_preprocessing_eda.data_loader import get_all_datasets, get_train_val_test_splits
-from member_7_mapping_strategies.mappings import (
+from member_3_data_and_statistical_evaluation.data_loader import get_all_datasets, get_train_val_test_splits
+from member_5_mapping_strategies.mappings import (
     linear_mapping,
     quantile_mapping,
     sigmoid_mapping,
@@ -265,12 +265,12 @@ We developed and systematically investigated four distinct transformation mechan
 
 ## 4. Generated Deliverables
 - Tables:
-  - `member_7_mapping_strategies/results/tables/mapping_comparison.csv`
-  - `member_7_mapping_strategies/results/tables/sensitivity_grid_results.csv`
+  - `member_5_mapping_strategies/results/tables/mapping_comparison.csv`
+  - `member_5_mapping_strategies/results/tables/sensitivity_grid_results.csv`
 - Figures:
-  - `member_7_mapping_strategies/results/figures/mapping_curves.png`
-  - `member_7_mapping_strategies/results/figures/mapping_comparison_bars.png`
-  - `member_7_mapping_strategies/results/figures/sensitivity_heatmaps.png`
+  - `member_5_mapping_strategies/results/figures/mapping_curves.png`
+  - `member_5_mapping_strategies/results/figures/mapping_comparison_bars.png`
+  - `member_5_mapping_strategies/results/figures/sensitivity_heatmaps.png`
 """
     with open(doc_path, "w") as f:
         f.write(report_text)

@@ -23,7 +23,7 @@ from sklearn.preprocessing import StandardScaler
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from member_1_adaptive_algorithm.adaptive_knn import DensityAdaptiveKNN
-from member_3_dataset_preprocessing_eda.data_loader import get_all_datasets, get_train_val_test_splits
+from member_3_data_and_statistical_evaluation.data_loader import get_all_datasets, get_train_val_test_splits
 
 SEEDS = [42, 123, 456, 789, 1024]
 NOISE_LEVELS = [0.0, 0.1, 0.25, 0.5, 1.0]
@@ -317,12 +317,12 @@ To thoroughly test the reliability and boundary dynamics of `DensityAdaptiveKNN`
 
 ## 3. Deliverables & Results
 - Metric Tables:
-  - `member_4_robustness_imbalance/results/tables/noise_experiments.csv`
-  - `member_4_robustness_imbalance/results/tables/imbalance_experiments.csv`
+  - `member_4_robustness_and_synthetic_analysis/results/tables/noise_experiments.csv`
+  - `member_4_robustness_and_synthetic_analysis/results/tables/imbalance_experiments.csv`
 - Figures:
-  - `member_4_robustness_imbalance/results/figures/noise_robustness_curves.png`
-  - `member_4_robustness_imbalance/results/figures/adaptive_k_under_noise.png`
-  - `member_4_robustness_imbalance/results/figures/minority_recall_heatmaps.png`
+  - `member_4_robustness_and_synthetic_analysis/results/figures/noise_robustness_curves.png`
+  - `member_4_robustness_and_synthetic_analysis/results/figures/adaptive_k_under_noise.png`
+  - `member_4_robustness_and_synthetic_analysis/results/figures/minority_recall_heatmaps.png`
 """)
     print("Member 4 report written.")
 
