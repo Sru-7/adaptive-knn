@@ -33,7 +33,7 @@ adaptive-knn/
 ├── member_1_adaptive_algorithm/          # Member 1: Core DensityAdaptiveKNN, bounds, unit tests
 │   ├── adaptive_knn.py
 │   ├── test_adaptive_knn.py
-│   └── docs/methodology.md
+│   └── complete_contribution.md
 ├── member_2_baseline_models/             # Member 2: Baseline suite (Fixed KNN, LogReg, SVM)
 │   ├── baselines.py
 │   ├── run_baselines.py
@@ -113,5 +113,4 @@ python -m member_3_data_and_statistical_evaluation.run_statistical_evaluation
 * **Noise Robustness:** Under $\sigma = 1.0$ feature noise, Fixed $K=1$ crashes to $84\%$, while Adaptive KNN maintains $93\%$ (**$+9.0\%$ gain**).
 * **Minority Recall:** Preserves up to **$+25\%$ higher recall** under $1:10$ imbalance.
 
-Detailed findings and 15 evaluation graphs are documented in:
-👉 **[COMPREHENSIVE_EVALUATION_REPORT.md](COMPREHENSIVE_EVALUATION_REPORT.md)**
+Detailed findings and 15 evaluation graphs are documented in: **[COMPREHENSIVE_EVALUATION_REPORT.md](COMPREHENSIVE_EVALUATION_REPORT.md)**
